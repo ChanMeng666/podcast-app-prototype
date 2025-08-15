@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast App - Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .player-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        .control-button {
+            transition: all 0.2s ease;
+        }
+        .control-button:active {
+            transform: scale(0.95);
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 font-sans text-white">
+    <!-- iOS Status Bar -->
+    <div class="bg-black text-white text-xs flex justify-between items-center px-4 py-1">
+        <div class="flex items-center space-x-1">
+            <span>9:41</span>
+        </div>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal text-xs"></i>
+            <i class="fas fa-wifi text-xs"></i>
+            <div class="w-6 h-3 border border-white rounded-sm">
+                <div class="w-4 h-2 bg-white rounded-sm m-0.5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Player Interface -->
+    <div class="relative min-h-screen">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=800&fit=crop" 
+                 class="w-full h-full object-cover" alt="Podcast Background">
+            <div class="absolute inset-0 player-gradient"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 p-4 flex flex-col h-screen">
+            <!-- Header Controls -->
+            <div class="flex items-center justify-between mb-8">
+                <button class="p-2">
+                    <i class="fas fa-chevron-down text-white text-xl"></i>
+                </button>
+                <div class="text-center">
+                    <p class="text-white text-sm opacity-80">PLAYING FROM LIBRARY</p>
+                </div>
+                <button class="p-2">
+                    <i class="fas fa-ellipsis-h text-white text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Album Art -->
+            <div class="flex-1 flex items-center justify-center mb-8">
+                <div class="w-80 h-80 rounded-2xl shadow-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=320&h=320&fit=crop" 
+                         class="w-full h-full object-cover" alt="Episode Artwork">
+                </div>
+            </div>
+
+            <!-- Episode Info -->
+            <div class="text-center mb-6">
+                <h1 class="text-2xl font-bold text-white mb-2">Derek Sivers — How to Start a Movement</h1>
+                <p class="text-lg text-gray-300 mb-1">The Tim Ferriss Show</p>
+                <p class="text-sm text-gray-400">Episode 512 • Dec 15, 2023</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="mb-6">
+                <div class="bg-gray-600 rounded-full h-1 mb-2">
+                    <div class="progress-bar h-1 rounded-full" style="width: 35%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-400">
+                    <span>24:30</span>
+                    <span>-46:15</span>
+                </div>
+            </div>
+
+            <!-- Main Controls -->
+            <div class="flex items-center justify-center space-x-8 mb-6">
+                <button class="control-button">
+                    <i class="fas fa-backward text-white text-2xl"></i>
+                </button>
+                <button class="control-button">
+                    <i class="fas fa-undo text-white text-xl"></i>
+                </button>
+                <button class="control-button bg-white bg-opacity-20 rounded-full p-4">
+                    <i class="fas fa-pause text-white text-3xl"></i>
+                </button>
+                <button class="control-button">
+                    <i class="fas fa-redo text-white text-xl"></i>
+                </button>
+                <button class="control-button">
+                    <i class="fas fa-forward text-white text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Secondary Controls -->
+            <div class="flex items-center justify-between mb-6">
+                <button class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-full px-4 py-2">
+                    <i class="fas fa-tachometer-alt text-white"></i>
+                    <span class="text-white text-sm">1.2x</span>
+                </button>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="control-button">
+                        <i class="fas fa-bookmark text-white text-xl"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-share text-white text-xl"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-download text-white text-xl"></i>
+                    </button>
+                </div>
+                
+                <button class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-full px-4 py-2">
+                    <i class="fas fa-moon text-white"></i>
+                    <span class="text-white text-sm">15m</span>
+                </button>
+            </div>
+
+            <!-- Chapters/Queue Toggle -->
+            <div class="flex bg-white bg-opacity-10 rounded-full p-1 mb-4">
+                <button class="flex-1 bg-white bg-opacity-20 rounded-full py-2 text-center">
+                    <span class="text-white text-sm font-medium">Chapters</span>
+                </button>
+                <button class="flex-1 py-2 text-center">
+                    <span class="text-white text-sm">Up Next</span>
+                </button>
+            </div>
+
+            <!-- Chapters List -->
+            <div class="bg-white bg-opacity-10 rounded-xl p-4 max-h-32 overflow-y-auto">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-white text-sm font-medium">Introduction</h3>
+                            <p class="text-gray-400 text-xs">Starting the conversation</p>
+                        </div>
+                        <span class="text-gray-400 text-xs">0:00</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-white bg-opacity-10 rounded-lg p-2">
+                        <div class="flex-1">
+                            <h3 class="text-white text-sm font-medium">Building a Movement</h3>
+                            <p class="text-gray-400 text-xs">Core strategies and principles</p>
+                        </div>
+                        <span class="text-blue-400 text-xs">12:30</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-white text-sm font-medium">Common Mistakes</h3>
+                            <p class="text-gray-400 text-xs">What to avoid when starting</p>
+                        </div>
+                        <span class="text-gray-400 text-xs">28:45</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini Player (Alternative compact view) -->
+    <div class="hidden fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 p-3">
+        <div class="flex items-center space-x-3">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=50&h=50&fit=crop" 
+                 class="w-12 h-12 rounded-lg" alt="Episode">
+            <div class="flex-1 min-w-0">
+                <h3 class="text-white text-sm font-medium truncate">Derek Sivers — How to Start a Movement</h3>
+                <p class="text-gray-400 text-xs truncate">The Tim Ferriss Show</p>
+                <div class="bg-gray-600 rounded-full h-0.5 mt-1">
+                    <div class="bg-blue-500 h-0.5 rounded-full" style="width: 35%"></div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button class="text-white">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="bg-white text-gray-800 rounded-full p-2">
+                    <i class="fas fa-pause text-sm"></i>
+                </button>
+                <button class="text-white">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
