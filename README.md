@@ -161,9 +161,10 @@ Whether you're a podcast enthusiast, mental wellness advocate, or UX/UI designer
 > - Responsive design supports various screen sizes
 > - No backend services required for prototype demonstration
 
-|| [![][demo-shield-badge]][demo-link]   | No installation required! Visit our demo to experience the interface firsthand.                           |
-|| :------------------------------------ | :--------------------------------------------------------------------------------------------- |
-|| [![][discord-shield-badge]][discord-link] | Join our community! Connect with designers and podcast enthusiasts. |
+| Demo | Description |
+| :---- | :----------- |
+| [![][demo-shield-badge]][demo-link] | No installation required! Visit our demo to experience the interface firsthand. |
+| [![][discord-shield-badge]][discord-link] | Join our community! Connect with designers and podcast enthusiasts. |
 
 > [!TIP]
 > **⭐ Star us** to receive all release notifications from GitHub without delay!
