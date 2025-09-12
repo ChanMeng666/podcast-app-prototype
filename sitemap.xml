@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Showcase Page -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-main.png</image:loc>
+      <image:title>Podcast App Prototype Main Interface</image:title>
+      <image:caption>High-fidelity podcast application prototype showcase</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Discovery Interface -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/home.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-home.png</image:loc>
+      <image:title>Podcast Discovery Interface</image:title>
+      <image:caption>Personalized podcast recommendations and discovery</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Audio Player Interface -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/player.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-player.png</image:loc>
+      <image:title>Immersive Audio Player Interface</image:title>
+      <image:caption>Full-screen audio player with advanced controls</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Search Interface -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/search.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-search.png</image:loc>
+      <image:title>Podcast Search & Discovery Interface</image:title>
+      <image:caption>Advanced search functionality and content discovery</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Library Interface -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/library.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-library.png</image:loc>
+      <image:title>Podcast Library Management Interface</image:title>
+      <image:caption>Personal library management and content organization</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Profile Interface -->
+  <url>
+    <loc>https://chanmeng666.github.io/podcast-app-prototype/profile.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-profile.png</image:loc>
+      <image:title>Podcast User Profile & Settings Interface</image:title>
+      <image:caption>User profile and settings management</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

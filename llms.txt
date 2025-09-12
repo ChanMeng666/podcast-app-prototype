@@ -1,0 +1,50 @@
+# Podcast App Prototype - AI Guide
+
+## Project Overview
+This is a high-fidelity podcast application prototype showcasing modern UI/UX design patterns for iOS-compliant mobile interfaces. The project demonstrates innovative mental wellness integration with podcast listening experiences.
+
+## Core Value Proposition
+- Modern podcast app interface design
+- Mental wellness and AI coaching integration
+- iOS-compliant design patterns
+- High-fidelity prototype for developers and designers
+
+## Key Features
+1. **Immersive Audio Player**: Full-screen player with chapter navigation
+2. **AI Mental Coach**: Integrated wellness guidance system
+3. **Discovery Feed**: Personalized podcast recommendations
+4. **Library Management**: User content organization
+5. **Search & Discovery**: Advanced content discovery
+
+## Target Audience
+- Podcast enthusiasts
+- Mental wellness advocates
+- UI/UX designers
+- Mobile app developers
+- Product managers
+
+## Technical Stack
+- Frontend: HTML5, Tailwind CSS, FontAwesome
+- Design: iOS Human Interface Guidelines
+- Target Device: iPhone 15 Pro (393×852px)
+- Architecture: Static prototype with modular interfaces
+
+## Content Structure
+- index.html: Main showcase hub
+- home.html: Discovery and recommendations
+- player.html: Audio player interface
+- search.html: Content search and discovery
+- library.html: User library management
+- profile.html: User settings and preferences
+
+## Use Cases
+- Design reference for mobile app development
+- UI/UX inspiration for podcast applications
+- Mental wellness app integration examples
+- iOS design pattern demonstrations
+
+## Contact & Support
+- Developer: Chan Meng
+- Email: chanmeng.dev@gmail.com
+- GitHub: https://github.com/ChanMeng666
+- Portfolio: https://chanmeng.live

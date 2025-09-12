@@ -4,8 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast App - Home</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Podcast discovery interface with personalized recommendations, mental wellness integration, and iOS-compliant design patterns.">
+    <meta name="keywords" content="podcast discovery, mental wellness, personalized recommendations, iOS design, mobile interface">
+    <meta name="author" content="Chan Meng">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Podcast Discovery Interface - Home">
+    <meta property="og:description" content="Podcast discovery interface with personalized recommendations, mental wellness integration, and iOS-compliant design patterns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chanmeng666.github.io/podcast-app-prototype/home.html">
+    <meta property="og:image" content="https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-home.png">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Podcast Discovery Interface - Home">
+    <meta name="twitter:description" content="Podcast discovery interface with personalized recommendations, mental wellness integration, and iOS-compliant design patterns.">
+    <meta name="twitter:image" content="https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-home.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AI Instructions -->
+    <script type="text/llms.txt">
+# Podcast Discovery Interface
+
+This interface demonstrates the main discovery and recommendation system for a podcast application.
+
+## Core functionality:
+- Continue listening with progress tracking
+- Featured podcasts with ratings and reviews
+- Category browsing with visual cards
+- Recent episodes discovery
+- Search integration
+
+## Mental wellness features:
+- AI-powered mental coaching integration
+- Mindfulness content recommendations
+- Wellness-focused category organization
+
+## Design patterns:
+- Card-based content layout
+- Gradient category indicators
+- iOS-compliant navigation
+- Touch-optimized interactions
+
+This interface showcases how to integrate mental wellness features into traditional podcast discovery flows.
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Podcast Discovery Interface",
+      "description": "Main discovery feed featuring personalized podcast recommendations and mental wellness content",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Podcast App Prototype",
+        "url": "https://chanmeng666.github.io/podcast-app-prototype"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Featured Podcasts",
+        "itemListElement": [
+          {
+            "@type": "AudioObject",
+            "name": "The Tim Ferriss Show",
+            "description": "Derek Sivers — How to Start a Movement",
+            "duration": "PT1H10M45S"
+          }
+        ]
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://chanmeng666.github.io/podcast-app-prototype"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Discovery",
+            "item": "https://chanmeng666.github.io/podcast-app-prototype/home.html"
+          }
+        ]
+      }
+    }
+    </script>
     <style>
         .podcast-card {
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -31,9 +121,9 @@
     </div>
 
     <!-- Main Content -->
-    <div class="bg-white min-h-screen">
+    <main class="bg-white min-h-screen">
         <!-- Header -->
-        <div class="gradient-bg text-white p-4 pb-6">
+        <header class="gradient-bg text-white p-4 pb-6">
             <div class="flex items-center justify-between mb-4">
                 <h1 class="text-2xl font-bold">Discover</h1>
                 <div class="flex items-center space-x-3">
@@ -49,10 +139,10 @@
                 <input type="text" placeholder="Search podcasts, episodes..." 
                        class="bg-transparent text-white placeholder-white placeholder-opacity-70 flex-1 outline-none">
             </div>
-        </div>
+        </header>
 
         <!-- Continue Listening -->
-        <div class="p-4">
+        <section class="p-4">
             <h2 class="text-lg font-semibold mb-3 text-gray-800">Continue Listening</h2>
             <div class="bg-white podcast-card rounded-xl p-4 flex items-center space-x-3">
                 <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=60&h=60&fit=crop" 
@@ -71,10 +161,10 @@
                     <i class="fas fa-play text-sm"></i>
                 </button>
             </div>
-        </div>
+        </section>
 
         <!-- Featured Section -->
-        <div class="p-4">
+        <section class="p-4">
             <div class="flex items-center justify-between mb-3">
                 <h2 class="text-lg font-semibold text-gray-800">Featured This Week</h2>
                 <span class="text-blue-500 text-sm font-medium">See All</span>
@@ -113,10 +203,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Categories -->
-        <div class="p-4">
+        <section class="p-4">
             <h2 class="text-lg font-semibold mb-3 text-gray-800">Browse Categories</h2>
             <div class="grid grid-cols-2 gap-3">
                 <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-4 text-white">
@@ -140,10 +230,10 @@
                     <p class="text-xs opacity-80">445 shows</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Recent Episodes -->
-        <div class="p-4 pb-20">
+        <section class="p-4 pb-20">
             <h2 class="text-lg font-semibold mb-3 text-gray-800">Recent Episodes</h2>
             <div class="space-y-3">
                 <div class="bg-white podcast-card rounded-xl p-4 flex items-center space-x-3">
@@ -180,11 +270,11 @@
                     </button>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- Bottom Tab Navigation -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
         <div class="flex items-center justify-around py-2">
             <div class="flex flex-col items-center py-1">
                 <i class="fas fa-home text-blue-500 text-lg"></i>
@@ -207,6 +297,6 @@
                 <span class="text-xs text-gray-400 mt-1">Profile</span>
             </div>
         </div>
-    </div>
+    </nav>
 </body>
 </html>

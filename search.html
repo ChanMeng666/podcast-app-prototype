@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast App - Search</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Advanced podcast search and discovery interface with filters, trending content, and personalized recommendations.">
+    <meta name="keywords" content="podcast search, content discovery, trending podcasts, iOS design, mobile interface">
+    <meta name="author" content="Chan Meng">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Podcast Search & Discovery Interface">
+    <meta property="og:description" content="Advanced podcast search and discovery interface with filters, trending content, and personalized recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chanmeng666.github.io/podcast-app-prototype/search.html">
+    <meta property="og:image" content="https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-search.png">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Podcast Search & Discovery Interface">
+    <meta name="twitter:description" content="Advanced podcast search and discovery interface with filters, trending content, and personalized recommendations.">
+    <meta name="twitter:image" content="https://chanmeng666.github.io/podcast-app-prototype/assets/screenshot-search.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AI Instructions -->
+    <script type="text/llms.txt">
+# Podcast Search & Discovery Interface
+
+This interface demonstrates advanced search functionality and content discovery for podcast applications.
+
+## Core functionality:
+- Comprehensive search with filters (All, Podcasts, Episodes, People)
+- Recent searches with quick access
+- Popular categories with visual indicators
+- Trending content with ranking system
+- Personalized recommendations
+
+## Search features:
+- Real-time search suggestions
+- Category-based filtering
+- Trending content discovery
+- Personalized "You Might Like" recommendations
+
+## Design patterns:
+- Clean search interface with clear filters
+- Category chips for easy browsing
+- Trending indicators with visual ranking
+- Card-based content presentation
+
+This interface shows how to create effective search experiences for podcast content discovery.
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Podcast Search & Discovery Interface",
+      "description": "Advanced search functionality and content discovery for podcast applications",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Podcast App Prototype",
+        "url": "https://chanmeng666.github.io/podcast-app-prototype"
+      },
+      "mainEntity": {
+        "@type": "SearchAction",
+        "target": "https://chanmeng666.github.io/podcast-app-prototype/search.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <style>
         .podcast-card {
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
